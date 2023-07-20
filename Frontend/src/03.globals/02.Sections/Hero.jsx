@@ -6,8 +6,9 @@ const Hero = () => {
         <>
             <Navbar />
 
-            <section class="bg-white">
-                <div class=" mx-auto max-w-screen-xl text-center py-16 :px-12">
+            <section class="bg-white font-Lugrasimo">
+
+                <div class=" mx-auto max-w-screen-xl text-center py-16 px-12">
                     <a href="1348 étant l'année où la concurrence s'est brusquement raréfiée sur le marché porteur du matos enchanté" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full">
                         <span class="text-sm font-medium">Gnome Depot, dealer de matos enchanté depuis 1348 !</span>
                         <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
