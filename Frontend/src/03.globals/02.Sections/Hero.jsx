@@ -6,29 +6,29 @@ const Hero = () => {
         <>
             <Navbar />
 
-            <section class="bg-white font-Lugrasimo">
+            <section class="bg-neutral-100 font-Lugrasimo ">
 
                 <div class=" mx-auto max-w-screen-xl text-center py-16 px-12">
                     <a href="1348 étant l'année où la concurrence s'est brusquement raréfiée sur le marché porteur du matos enchanté" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full">
-                        <span class="text-sm font-medium">Gnome Depot, dealer de matos enchanté depuis 1348 !</span>
-                        <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                        <span class="text-xl font-medium">Gnome Depot, dealer de matos enchanté, satisfait ou vos proches remboursés !</span>
+                        
                     </a>
-                    <h1 class="mb-4 font-extrabold tracking-tight leading-none text-gray-900 text-6xl">Le meilleur matos au meilleur prix !</h1>
-                    <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Chez Gnome Depot vous trouverez du matos de qualité, fournis par les meilleurs artisans, enchanteurs et voleurs du royaume !</p>
-                    <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                        <span class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-700 rounded-lg bg-gray-200 hover:bg-gray-700 hover:text-gray-200 border border-gray-700 cursor-pointer">
+                    <h1 class="mb-4 font-extrabold tracking-tight leading-none text-gray-900 text-6xl drop-shadow-lg">Le meilleur matos au meilleur prix !</h1>
+                    <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Chez Gnome Depot vous trouverez des articles de qualité, fournis par les meilleurs artisans, enchanteurs et voleurs du royaume !</p>
+                    <div class="flex flex-col mb-8 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+                        <span class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center drop-shadow-lg text-gray-700 rounded-lg bg-gray-200 hover:bg-gray-700 hover:text-gray-200 border border-gray-700 cursor-pointer">
                             Pas Convaincu ?
                             <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                         </span>
                         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-200 rounded-lg bg-gray-800 hover:bg-gray-200 hover:text-gray-800 ">
-                            <svg class="mr-2 -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
+                            <svg class="mr-2 drop-shadow-lg -ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path></svg>
                             Regardes donc !
                         </a>
                     </div>
-                    <div class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
-                        <span class="font-semibold text-gray-400 uppercase">Ils nous adorent :</span>
-                        <div class="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
-                            <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+                    <div class="mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg px-36">
+                        <span class="font-semibold text-slate-500 uppercase drop-shadow-lg">Ils nous a-dorent :</span>
+                        <div class="flex flex-wrap justify-center items-center my-8 text-gray-500 drop-shadow-lg">
+                            <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800">
                                 <svg class="h-8" viewBox="0 0 132 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M39.4555 5.17846C38.9976 3.47767 37.6566 2.13667 35.9558 1.67876C32.8486 0.828369 20.4198 0.828369 20.4198 0.828369C20.4198 0.828369 7.99099 0.828369 4.88379 1.64606C3.21571 2.10396 1.842 3.47767 1.38409 5.17846C0.566406 8.28567 0.566406 14.729 0.566406 14.729C0.566406 14.729 0.566406 21.2051 1.38409 24.2796C1.842 25.9804 3.183 27.3214 4.88379 27.7793C8.0237 28.6297 20.4198 28.6297 20.4198 28.6297C20.4198 28.6297 32.8486 28.6297 35.9558 27.812C37.6566 27.3541 38.9976 26.0131 39.4555 24.3123C40.2732 21.2051 40.2732 14.7618 40.2732 14.7618C40.2732 14.7618 40.3059 8.28567 39.4555 5.17846Z" fill="currentColor" />
                                     <path d="M16.4609 8.77612V20.6816L26.7966 14.7289L16.4609 8.77612Z" fill="white" />
@@ -57,6 +57,25 @@ const Hero = () => {
                                 </svg>
                             </a>
                         </div>
+                  <div class="bg-white ">
+                         <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+                                 <figure class="max-w-screen-md mx-auto">
+                                     <svg class="h-12 mx-auto mb-3 text-gray-400 " viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"/>
+                                       </svg> 
+                                       <blockquote>
+                                        <p class="text-2xl font-medium text-gray-900 d">"Gnome Dépot is just awesome. It contains tons of magical equipment, spells and various tools starting from sunscreen dough to annihilation staffs. Perfect choice for your next dungeon-crawling adventure."</p>
+                                        </blockquote>
+                                        <figcaption class="flex items-center justify-center mt-6 space-x-3">
+                                             <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture"/>
+                                                <div class="flex items-center divide-x-2 divide-gray-500 ">
+                                                 <div class="pr-3 font-medium text-gray-900 ">Demonius Terribilus</div>
+                                                  <div class="pl-3 text-sm font-light text-gray-500 ">CEO at Disruptive Demons</div>
+                                         </div>
+                                         </figcaption>
+                                  </figure>
+                         </div>
+                   </div>
                     </div>
                 </div>
             </section>
