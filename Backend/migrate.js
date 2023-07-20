@@ -25,8 +25,12 @@ const migrate = async () => {
   connection.end();
 };
 
-try {
-  migrate();
-} catch (err) {
-  console.error(err);
-}
+(async () => {
+  try {
+    await migrate();
+    console.log("Migration successful!");
+  } catch (err) {
+    console.error("Error during migration:", err);
+  }
+})();
+

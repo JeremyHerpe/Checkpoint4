@@ -1,65 +1,76 @@
 const database = require("../../database");
 
 // Create
-
-const createOneArticle = (req, res) => {
-  const { article_name, article_description, article_picture, article_price } =
-    req.body;
+const createArticle = (req, res) => {
+  const { article_name, article_description, article_picture, article_price } = req.body;
   database
     .query(
       "INSERT INTO articles (article_name, article_description, article_picture, article_price) VALUES (?, ?, ?, ?)",
-      [
-        article_name,
-        article_description,
-        article_picture,
-        article_price,
-        article_id,
-      ]
+      [article_name, article_description, article_picture, article_price]
     )
-    .then(() => res.status(201).send("Poster created"))
-    .catch(err => res.status(500).send("Error creating a new article", err));
+    .then(() => res.status(201).send("Article created"))
+    .catch(err => res.status(500).send("Error creating a new article: ", err));
 };
 
 // Read
-
-const getAllPosters = (req, res) => {
+const getAllArticles = (req, res) => {
   database
-    .query("SELECT * FROM posters")
-    .then(([posters]) => res.json(posters))
-    .catch(err =>
-      res.status(500).send("Error getting data from database", err)
-    );
+    .query("SELECT * FROM articles")
+    .then(([result]) => {
+      if (result.length) {
+        res.status(200).json(result);
+      } else {
+        console.warn("No articles found in the database");
+        res.status(404).json([]);
+      }
+    })
+    .catch(err => res.status(500).send("Error getting articles from the database: ", err));
+};
+
+// Read One
+const getOneArticle = (req, res) => {
+  const id = req.params.id;
+  database
+    .query("SELECT * FROM articles WHERE article_id=?", [id])
+    .then(([result]) => {
+      if (result.length) {
+        res.status(200).json(result);
+      } else {
+        console.warn("No article found in the database with the provided ID");
+        res.status(404).json([]);
+      }
+    })
+    .catch(err => res.status(500).send("Error getting the article from the database: ", err));
 };
 
 // Update
-
-const updateOnePoster = (req, res) => {
-  const postersId = Number(req.params.postersId);
-  const { posters_text, id_colors } = req.body;
+const updateArticle = (req, res) => {
+  const id = req.params.id;
+  const { article_name, article_description, article_picture, article_price } = req.body;
 
   database
     .query(
-      "UPDATE posters SET posters_text = ?, id_colors = ? WHERE posters_id = ?",
-      [posters_text, id_colors, postersId]
+      "UPDATE articles SET article_name=?, article_description=?, article_picture=?, article_price=? WHERE article_id = ?",
+      [article_name, article_description, article_picture, article_price, id]
     )
-    .then(() => res.send("Poster updated"))
-    .catch(err => res.status(500).send("Error updating poster", err));
+    .then(() => res.send("Article updated"))
+    .catch(err => res.status(500).send("Error updating article: ", err));
 };
 
 // Delete
-
-const deleteOnePoster = (req, res) => {
-  const postersId = Number(req.params.postersId);
+const deleteArticle = (req, res) => {
+  const id = req.params.id;
 
   database
-    .query("DELETE FROM posters WHERE posters_id = ?", [postersId])
-    .then(() => res.send("Poster deleted"))
-    .catch(err => res.status(500).send("Error deleting poster", err));
+    .query("DELETE FROM articles WHERE article_id = ?", [id])
+    .then(() => res.send("Article deleted"))
+    .catch(err => res.status(500).send("Error deleting article: ", err));
 };
 
 module.exports = {
-  createOneArticle,
-  getAllPosters,
-  updateOnePoster,
-  deleteOnePoster,
+  createArticle,
+  getAllArticles,
+  updateArticle,
+  deleteArticle,
+  getOneArticle,
 };
