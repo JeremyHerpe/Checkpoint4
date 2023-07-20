@@ -1,30 +1,29 @@
 import React from "react";
 
-const Article = () => {
+const Article = ({ article_picture, article_name, article_description, article_price }) => {
+  return (
+    <>
+      <div className="flex flex-row rounded-lg bg-gray-100 border border-gray-800 px-5 py-5 cursor-pointer drop-shadow-xl">
+        <img
+          className="object-fit h-auto w-64 rounded-l-lg border drop-shadow-lg"
+          src={article_picture}
+          alt="matos"
+        />
+        <div className="flex flex-col justify-start mx-auto p-6 font-Lugrasimo">
+          <h5 className="mb-2 mx-auto text-xl font-bold uppercase text-neutral-800">
+            {article_name}
+          </h5>
+          <p className="mx-auto text-base text-neutral-600">
+            {article_description}
+                  </p>
+                
+          <p className="mx-auto self-center text-xl text-neutral-500">{article_price} gold
+                      </p>
+                
+        </div>
+      </div>
+    </>
+  );
+};
 
-    return (
-        <>
-            <div
-                class="flex flex-row rounded-lg bg-gray-100 border border-gray-800 px-5 py-5 cursor-pointer">
-                <img
-                    class=" object-cover h-auto w-32 rounded-l-lg"
-                    src="https://tecdn.b-cdn.net/wp-content/uploads/2020/06/vertical.jpg"
-                    alt="" />
-                <div class="flex flex-col justify-start p-6 font-Lugrasimo">
-                    <h5
-                        class="mb-2 text-xl font-bold uppercase text-neutral-800 ">
-                        Lorem ipsum dolor sit amet.
-                    </h5>
-                    <p class="mb-1 text-base text-neutral-600">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus enim nulla deleniti, laboriosam corporis cupiditate.
-                    </p>
-                    <p class="text-xs text-neutral-500">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas tenetur iure temporibus tempore quo illo eaque quis dolore odio mollitia.
-                    </p>
-                </div>
-            </div>
-        </>
-    )
-}
-
-export default Article
+export default Article;
