@@ -4,19 +4,19 @@ const Footer = () => {
 
     return (
         <>
-            <footer className="flex w-full bottom-0 bg-orange-500 border border-black">
+            <footer className="flex w-full mt-auto bottom-0 bg-orange-500 border border-black">
 
-                <div className="flex flex-wrap items-center justify-between mx-auto px-3 py-3">
+                <div className="flex flex-wrap items-center justify-between mx-auto px-2 py-2">
 
                     <ul className="flex flex-row justify-center gap-16">
                         <li>
-                            <span className="px-4 py-4 text-orange-800 font-sans text-2xl font-bold uppercase cursor-pointer">Service après-vente</span>
+                            <span className="px-4 py-4 text-orange-800 font-Lugrasimo text-2xl font-bold uppercase cursor-pointer">Service après-vente</span>
                         </li>
                         <li>
-                            <span className="px-4 py-4 text-orange-800 font-sans text-2xl font-bold uppercase cursor-pointer">Services après-mort</span>
+                            <span className="px-4 py-4 text-orange-800 font-Lugrasimo text-2xl font-bold uppercase cursor-pointer">Services après-mort</span>
                         </li>
                         <li>
-                            <span className="px-4 py-4 text-orange-800 font-sans text-2xl font-bold uppercase cursor-pointer">On recrute !</span>
+                            <span className="px-4 py-4 text-orange-800 font-Lugrasimo text-2xl font-bold uppercase cursor-pointer">On recrute !</span>
                         </li>
                     </ul>
 

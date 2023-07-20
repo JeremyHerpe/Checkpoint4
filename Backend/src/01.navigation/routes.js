@@ -1,29 +1,15 @@
 const express = require("express");
 const router = express.Router();
 
+const articlecontroller = require("../02.controllers/articlecontroller");
+const usercontroller = require("../02.controllers/usercontroller");
 
-const postersController = require("../02.controllers/posters.controller");
-const colorsController = require("../02.controllers/colors.controller");
+router.get("/users", usercontroller.browse);
+router.get("/users/:id", usercontroller.read);
+router.post("/user", usercontroller.add);
+router.delete("/user/:id", usercontroller.destroy);
 
-
-
-/* ------------------------------------------------------------------------
-Routes Posters
-------------------------------------------------------------------------- */
-
-router.get("/posters", postersController.getAllPosters)
-router.post("/posters", postersController.createOnePoster)
-router.put("/posters/:postersId", postersController.updateOnePoster)
-router.delete("/posters/:postersId", postersController.deleteOnePoster)
-
-
-
-
-/* ------------------------------------------------------------------------
-Routes colors
-------------------------------------------------------------------------- */
-
-router.get("/colors", colorsController.getAllColors)
-
-
-module.exports = router
+router.get("/articles", articlecontroller.browser);
+router.get("/articles/:id", articlecontroller.read);
+router.post("/article", articlecontroller.add);
+router.delete("/article/:id", articlecontroller.destroy);
