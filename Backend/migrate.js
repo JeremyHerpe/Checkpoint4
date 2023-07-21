@@ -33,4 +33,3 @@ const migrate = async () => {
     console.error("Error during migration:", err);
   }
 })();
-

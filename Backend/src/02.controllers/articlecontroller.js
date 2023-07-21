@@ -2,7 +2,8 @@ const database = require("../../database");
 
 // Create
 const createArticle = (req, res) => {
-  const { article_name, article_description, article_picture, article_price } = req.body;
+  const { article_name, article_description, article_picture, article_price } =
+    req.body;
   database
     .query(
       "INSERT INTO articles (article_name, article_description, article_picture, article_price) VALUES (?, ?, ?, ?)",
@@ -24,7 +25,9 @@ const getAllArticles = (req, res) => {
         res.status(404).json([]);
       }
     })
-    .catch(err => res.status(500).send("Error getting articles from the database: ", err));
+    .catch(err =>
+      res.status(500).send("Error getting articles from the database: ", err)
+    );
 };
 
 // Read One
@@ -40,13 +43,16 @@ const getOneArticle = (req, res) => {
         res.status(404).json([]);
       }
     })
-    .catch(err => res.status(500).send("Error getting the article from the database: ", err));
+    .catch(err =>
+      res.status(500).send("Error getting the article from the database: ", err)
+    );
 };
 
 // Update
 const updateArticle = (req, res) => {
   const id = req.params.id;
-  const { article_name, article_description, article_picture, article_price } = req.body;
+  const { article_name, article_description, article_picture, article_price } =
+    req.body;
 
   database
     .query(
